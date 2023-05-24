@@ -36,11 +36,12 @@ int main()
 		filename += to_string(i);
 		string filenameinp = filename;
 		filenameinp += ".inp";
-		if (Input(t, filenameinp) == true)
+		if (Input(t, filenameinp) == 1)
 		{
 			cout << "\nThe number of nodes:	" << NodeCount(t);
 			string filenameout = filename;
 			filenameout += ".out";
+			Output(t, filenameout);
 			cout << "\nImport	" << filenameinp << "	successfully!";
 			cout << "\nExport	" << filenameout << "	successfully!" << endl;
 		}
@@ -53,7 +54,6 @@ int main()
 	cout << endl;
 	return 1;
 }
-
 
 void Init(TREE& t)
 {
